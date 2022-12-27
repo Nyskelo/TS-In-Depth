@@ -53,7 +53,18 @@ interface ShelfItem {
     title: string;
 }
 
+interface LibMgrCallback{
+    (err: Error | null, titles: string[] | null): void;
+
+}
+interface Callback<T>{
+    (err: Error | null, dat: T | null): void;
+
+}
+
 export {
+    LibMgrCallback,
+    Callback,
     Magazine,
     ShelfItem,
     A,
